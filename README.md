@@ -2,6 +2,8 @@
 
 > This project is movie library where list of movies are displayed. It is simply showcase of vue features such as components, routing, data-binding, etc.
 
+### [Demo](https://online-edu.github.io/vue-movies)
+
 ## Build Setup
 
 ``` bash
