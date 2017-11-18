@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue-movies</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app"></div>  
+</body>
+<style>
+  body {
+    font-family: 'Roboto';
+    background: #141414;
+    color: #FFF;
+  }
+
+  body a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  body .loading {
+    visibility: visible !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
+  .container .left-col {
+    float: left;
+    margin: 10px 20px;
+    width: 50%;
+  }
+
+  .container .right-col {
+    overflow: hidden;
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    .container .left-col {
+      float: none;
+      margin-right: 0;
+      margin-left: 0;
+      width: auto;
+    }
+  }
+
+  .movie-name,
+  .label {
+    color: #48a3c6;
+  }
+
+  .movie-desc,
+  .crew {
+    color: #b3b3b3;
+    line-height: 24px;
+  }
+</style>
+
+</html>
