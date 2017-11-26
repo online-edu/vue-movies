@@ -36,6 +36,7 @@
                 </div>
           </div>
       </div>
+      <div style="clear: both;"></div>
   </div>
 </template>
 
@@ -53,7 +54,7 @@ export default {
   methods: {
     getMovies() {
       return axios
-        .get("https://movie-app-29a50.firebaseapp.com/assets/data/movies.json")
+        .get("static/movies.json")
         .then(response => {
           this.topMovies = response.data.slice(5, 10);
           this.latestMovies = response.data.slice(1, 5);
