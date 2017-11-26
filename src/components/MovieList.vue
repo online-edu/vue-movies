@@ -23,7 +23,7 @@ export default {
   methods: {
     getMovies() {
       return axios
-        .get("https://movie-app-29a50.firebaseapp.com/assets/data/movies.json")
+        .get("static/movies.json")
         .then(response => {
           this.movies = response.data;
         });
