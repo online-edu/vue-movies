@@ -16,6 +16,9 @@
     <transition name="fade">
         <router-view/>
     </transition>
+    <footer>
+      <img src="./assets/logo.png" />
+    </footer>
 </div>
 </template>
 
@@ -57,6 +60,16 @@ header {
 }
 .container {
   padding-top: 65px;
+  footer{
+    width: 100%;
+    margin: 0!important;
+    padding-top: 10px;
+    border-top: thin solid rgba(255, 255, 2555, .5);
+    text-align: center;
+    img{
+      width: 36px;
+    }
+  }
 }
 .fade-enter-active,
 .fade-leave-active {
