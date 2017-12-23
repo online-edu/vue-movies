@@ -36,6 +36,7 @@ header {
   top: 0;
   position: fixed;
   border-bottom: thin solid #fff;
+  z-index: 99;
   ul {
     list-style-type: none;
     margin: 0;
@@ -60,13 +61,16 @@ header {
 }
 .container {
   padding-top: 65px;
-  footer{
+  footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
     width: 100%;
-    margin: 0!important;
+    margin: 0 !important;
     padding-top: 10px;
-    border-top: thin solid rgba(255, 255, 2555, .5);
+    border-top: thin solid rgba(255, 255, 255, 0.5);
     text-align: center;
-    img{
+    img {
       width: 36px;
     }
   }
