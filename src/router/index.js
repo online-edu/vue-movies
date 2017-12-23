@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Dashboard from '@/components/Dashboard';
 import MovieList from '@/components/MovieList';
+import MovieDetail from '@/components/MovieDetail';
 
 Vue.use(Router);
 
@@ -10,17 +11,25 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/dashboard'
     },
     {
       path: '/dashboard',
       name: 'Dashboard',
-      component: Dashboard,
+      component: Dashboard
     },
     {
       path: '/movies',
       name: 'MovieList',
-      component: MovieList,
+      component: MovieList
     },
+    {
+      path: '/movie/:id',
+      name: 'MovieDetail',
+      component: MovieDetail
+    }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });
