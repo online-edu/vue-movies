@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Dashboard from '@/components/Dashboard';
 import MovieList from '@/components/MovieList';
+import MovieDetail from '@/components/MovieDetail'
 
 Vue.use(Router);
 
@@ -22,5 +23,10 @@ export default new Router({
       name: 'MovieList',
       component: MovieList,
     },
+    {
+      path: '/movie/:id',
+      name: 'MovieDetail',
+      component: MovieDetail,
+    }
   ],
 });
