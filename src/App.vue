@@ -3,10 +3,10 @@
     <header>
         <ul>
             <li>
-                 <router-link to="/">Movies</router-link>
+                 <router-link class="brand" to="/">Movies</router-link>
             </li>            
             <li>
-                 <router-link to="/dashboard">Dashboard</router-link>                
+                 <router-link to="/dashboard">Home</router-link>                
             </li>            
             <li>
                 <router-link to="/movies">Movies</router-link>                
@@ -17,7 +17,14 @@
         <router-view/>
     </transition>
     <footer>
-      <img src="./assets/logo.png" />
+      <a href="https://vuejs.org/" target="_blank">
+        <img src="./assets/logo.png" />
+      </a>
+      <div class="git-buttons">
+        <a class="github-button" href="https://github.com/online-edu/vue-movies/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork online-edu/vue-movies on GitHub">Fork</a>                  
+        <a class="github-button" href="https://github.com/online-edu/vue-movies/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch online-edu/vue-movies on GitHub">Watch</a>                  
+        <a class="github-button" href="https://github.com/online-edu/vue-movies" data-icon="octicon-star" data-size="large" aria-label="Star online-edu/vue-movies on GitHub">Star</a>
+      </div>
     </footer>
 </div>
 </template>
@@ -64,14 +71,20 @@ header {
   footer {
     position: fixed;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     margin: 0 !important;
     padding-top: 10px;
     border-top: thin solid rgba(255, 255, 255, 0.5);
     text-align: center;
     img {
+      position: absolute;
       width: 36px;
+      top: 8px;
+    }
+    .git-buttons {
+      padding: 6px 15px 6px 0;
+      float: right;
     }
   }
 }
