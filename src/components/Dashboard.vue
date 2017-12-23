@@ -10,7 +10,11 @@
                         <tr>
                             <td><img class="movie-img" :src="movie.image" /></td>
                             <td :style="{paddingLeft:'15px'}">
-                                <a class="movie-name">{{movie.name}}</a>
+                                <router-link 
+                                  class="movie-name" 
+                                  :to="{name:'MovieDetail',params:{id:movie.id}}"
+                                >{{movie.name}}
+                                </router-link>                                
                                 <p class="movie-desc">{{movie.summary}}</p>
                             </td>
                         </tr>
@@ -27,8 +31,12 @@
                     <table>
                         <tr>
                             <td><img class="movie-img" :src="movie.image" /></td>
-                            <td :style="{paddingLeft:'15px'}">
-                                <a class="movie-name">{{movie.name}}</a>
+                            <td :style="{paddingLeft:'15px'}">                                
+                                <router-link 
+                                  class="movie-name" 
+                                  :to="{name:'MovieDetail',params:{id:movie.id}}"
+                                >{{movie.name}}
+                                </router-link>
                                 <p class="movie-desc">{{movie.summary}}</p>
                             </td>
                         </tr>
@@ -41,29 +49,27 @@
 </template>
 
 <script>
-import axios from "axios";
+import { movieService } from "../movie.service";
 
 export default {
   name: "Dashboard",
   data() {
     return {
       topMovies: [],
-      latestMovies: [],
+      latestMovies: []
     };
   },
   methods: {
     getMovies() {
-      return axios
-        .get("static/movies.json")
-        .then(response => {
-          this.topMovies = response.data.slice(5, 10);
-          this.latestMovies = response.data.slice(1, 5);
-        });
-    },
+      return movieService.getMovies().then(response => {
+        this.topMovies = response.data.slice(5, 10);
+        this.latestMovies = response.data.slice(1, 5);
+      });
+    }
   },
   created: function() {
     this.getMovies();
-  },
+  }
 };
 </script>
 
