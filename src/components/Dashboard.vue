@@ -75,11 +75,15 @@ export default {
 
 <style lang="scss" scoped>
 .dashboard {
+  margin-bottom: 25px;
   .list {
     .list-item {
       padding: 10px;
       border-bottom: thin solid #dedede;
       width: auto;
+      &:last-child {
+        border-bottom: none;
+      }
       .movie-name {
         font-size: 22px;
       }

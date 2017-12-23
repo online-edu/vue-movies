@@ -35,6 +35,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .movies {
+  margin-bottom: 25px;
   font-size: 18px;
   text-align: center;
   padding: 5px;

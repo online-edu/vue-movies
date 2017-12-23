@@ -1,6 +1,6 @@
 <template>
     <div v-if="movie" class="movie">
-  <div class="container">
+  <div class="container" :style="{marginBottom: '25px'}" >
     <div class="left-col">
       <div class="poster">
         <figure>
@@ -69,11 +69,6 @@ export default {
       height: 500px;
       -webkit-box-reflect: below 0px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)
             0%, transparent 25%, transparent 100%);
-      @media screen and (max-width: 400px) {
-        figure {
-          margin: 0;
-        }
-      }
     }
   }
   .info {
@@ -94,6 +89,11 @@ export default {
         }
       }
     }
+  }
+}
+@media screen and (max-width: 400px) {
+  figure {
+    margin: 0;
   }
 }
 </style>

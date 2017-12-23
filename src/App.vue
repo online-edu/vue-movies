@@ -64,7 +64,7 @@ header {
   footer {
     position: fixed;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .9);
     width: 100%;
     margin: 0 !important;
     padding-top: 10px;
