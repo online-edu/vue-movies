@@ -88,6 +88,14 @@ header {
     }
   }
 }
+@media screen and (max-width: 400px) {
+  footer {
+    img {
+      left: 15px;
+    }
+    
+  }
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
